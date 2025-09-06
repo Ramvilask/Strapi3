@@ -1,0 +1,73 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_settings",
+  "info": {
+    "singularName": "site-setting",
+    "pluralName": "site-settings",
+    "displayName": "Site Settings",
+    "description": "Global site configuration and settings"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "siteName": {
+      "type": "string",
+      "required": true
+    },
+    "siteDescription": {
+      "type": "text"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "metaTitle": {
+      "type": "string"
+    },
+    "metaDescription": {
+      "type": "text",
+      "maxLength": 160
+    },
+    "keywords": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "richtext"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "favicon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "socialMedia": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.social-media"
+    },
+    "maintenanceMode": {
+      "type": "boolean",
+      "default": false
+    },
+    "maintenanceMessage": {
+      "type": "richtext"
+    },
+    "copyrightText": {
+      "type": "string",
+      "default": "© 2024 All rights reserved"
+    }
+  }
+}
