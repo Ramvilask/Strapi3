@@ -578,8 +578,8 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
 export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
   collectionName: 'site_settings';
   info: {
-    description: 'Global site settings such as logo, favicon, etc.';
-    displayName: 'Site Setting';
+    description: 'Global site configuration and settings';
+    displayName: 'Site Settings';
     pluralName: 'site-settings';
     singularName: 'site-setting';
   };
@@ -587,10 +587,18 @@ export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
+    address: Schema.Attribute.RichText;
+    copyrightText: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'\u00A9 2024 All rights reserved'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    email: Schema.Attribute.Email;
+    facebookUrl: Schema.Attribute.String;
     favicon: Schema.Attribute.Media<'images'>;
+    instagramUrl: Schema.Attribute.String;
+    keywords: Schema.Attribute.String;
+    linkedinUrl: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -598,12 +606,24 @@ export interface ApiSiteSettingSiteSetting extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     logo: Schema.Attribute.Media<'images'>;
+    maintenanceMessage: Schema.Attribute.RichText;
+    maintenanceMode: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    metaDescription: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 160;
+      }>;
+    metaTitle: Schema.Attribute.String;
+    phone: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     siteDescription: Schema.Attribute.Text;
-    siteName: Schema.Attribute.String;
+    siteName: Schema.Attribute.String & Schema.Attribute.Required;
+    tagline: Schema.Attribute.String;
+    twitterUrl: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    youtubeUrl: Schema.Attribute.String;
   };
 }
 
