@@ -14,7 +14,7 @@
   "attributes": {
     "siteName": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "logo": {
       "type": "media",
