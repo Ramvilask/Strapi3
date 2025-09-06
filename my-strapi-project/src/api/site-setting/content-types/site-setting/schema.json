@@ -53,10 +53,20 @@
       "required": false,
       "allowedTypes": ["images"]
     },
-    "socialMedia": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.social-media"
+    "facebookUrl": {
+      "type": "string"
+    },
+    "twitterUrl": {
+      "type": "string"
+    },
+    "instagramUrl": {
+      "type": "string"
+    },
+    "linkedinUrl": {
+      "type": "string"
+    },
+    "youtubeUrl": {
+      "type": "string"
     },
     "maintenanceMode": {
       "type": "boolean",
