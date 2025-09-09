@@ -80,12 +80,12 @@
       "default": "© 2024 All rights reserved"
     },
     "headerBgColor": {
-      "type": "customField",
-      "customField": "plugin::color-picker.color"
+      "type": "string",
+      "default": "#121e14"
     },
     "footerBgColor": {
-      "type": "customField",
-      "customField": "plugin::color-picker.color"
+      "type": "string",
+      "default": "#121e14"
     }
   }
 }
