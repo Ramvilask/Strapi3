@@ -78,6 +78,14 @@
     "copyrightText": {
       "type": "string",
       "default": "© 2024 All rights reserved"
+    },
+    "headerBgColor": {
+      "type": "string",
+      "default": "#121e14"
+    },
+    "footerBgColor": {
+      "type": "string",
+      "default": "#121e14"
     }
   }
 }
