@@ -19,11 +19,11 @@
       "type": "uid"
     },
     "articles": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::article.article",
-      "mappedBy": "category"
-    },
+    "type": "relation",
+    "relation": "manyToMany",
+    "target": "api::article.article",
+    "mappedBy": "categories"
+  },
     "description": {
       "type": "text"
     }
